@@ -14,8 +14,8 @@ grid on;
 % axis([-inf, 2, -inf, inf]);
 legend("$G(s)$", 'Interpreter', 'latex');
 set(fig, "position", [100, 150, 800, 450]);
-saveas(fig, "HW10/Fig/G_Bode_Plot");
-saveas(fig, "HW10/Fig/G_Bode_Plot.png");
+%saveas(fig, "HW10/Fig/G_Bode_Plot");
+%saveas(fig, "HW10/Fig/G_Bode_Plot.png");
 
 %% The lead compensation
 wmax = 5;
@@ -37,9 +37,9 @@ wval = sprintf("%g", wmax);
 aval = sprintf("%g", alpha);
 legend("$\omega\_\mathrm{max}=" + wval + "$ rad/s; $\alpha=" + aval + "$", 'interpreter', 'latex');
 set(fig2, "position", [200, 150, 800, 450]);
-figname = strrep("HW10/Fig/H_Bode_Plot_" + wval + "_" + aval, '.', 'p');
-saveas(fig2, figname);
-saveas(fig2, figname + ".png");
+%figname = strrep("HW10/Fig/H_Bode_Plot_" + wval + "_" + aval, '.', 'p');
+%saveas(fig2, figname);
+%saveas(fig2, figname + ".png");
 
 %% The closed-loop system
 sysHcls = sysDG / (1 + sysDG);
@@ -52,9 +52,9 @@ grid on;
 % title("");
 % axis([-inf, 2, -inf, inf]);
 set(fig3, "position", [300, 150, 800, 450]);
-figname = "HW10/Fig/Hcls_Bode_Plot";
-saveas(fig3, figname);
-saveas(fig3, figname + ".png");
+%figname = "HW10/Fig/Hcls_Bode_Plot";
+%saveas(fig3, figname);
+%saveas(fig3, figname + ".png");
 
 fig4 = figure(Name = "H Step Response");
 step(sysHcls);
@@ -64,6 +64,6 @@ grid on;
 % title("");
 axis([-inf, 5, -inf, inf]);
 set(fig4, "position", [400, 150, 800, 450]);
-figname = "HW10/Fig/Hcls_Step_Response";
-saveas(fig4, figname);
-saveas(fig4, figname + ".png");
+%figname = "HW10/Fig/Hcls_Step_Response";
+%saveas(fig4, figname);
+%saveas(fig4, figname + ".png");
